@@ -5,12 +5,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 // Redirect handler
+// app.get("/", (req, res) => {
+//     res.json({
+//       message:"server started"
+//   })
+// });
 app.get("/", (req, res) => {
-    res.json({
-      message:"server started"
-  })
-});
-app.get("/auth/callback", (req, res) => {
   const redirectUri =
     "com.hamzaaslam004.myapp://com.hamzaaslam004.myapp/android/callback";
   // Redirect to the custom scheme URI with query parameters
