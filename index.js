@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 //   })
 // });
 app.get("/", (req, res) => {
+    console.log(req,"======",res)
   const redirectUri =
     "com.hamzaaslam004.myapp://com.hamzaaslam004.myapp/android/callback";
   // Redirect to the custom scheme URI with query parameters
